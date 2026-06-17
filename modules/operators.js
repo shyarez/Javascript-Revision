@@ -1,7 +1,7 @@
 // Types of operators
 // Arithmetic operators : +, -, *, /, %, ++, --, **
 // Assignment operators : =, +=, -=, *=, /=, %= 
-// Comparison operators : ==, !=, ===, !==, <, >, <=, >=
+// Comparison operators : ==, !=, ===(strict), !==(strict), <, >, <=, >=
 // Logical operators : &&, ||, !
 // Unary operators : typeof, void, delete
 // Ternary operators : ? :
