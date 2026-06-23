@@ -112,3 +112,75 @@ for (let i = 1; i<=100; i++){
     sum += i;
 }
 console.log(sum);
+
+// Q7. Prunt all  numbers between 1 to 50 that are div by 3.
+for(let i=1; i<=50;i++){
+    if(i%3==0){
+        console.log(i)
+    }
+}
+
+// Q8. Ask the user for a number and print whether each number from 1 to that number is even or odd
+let val = prompt("enter a no.:")
+for(let i=1;i<=val;i++){
+    if(i%2==0){
+        console.log(`${i} is even`);
+    }else{
+        console.log(`${i} is odd`)
+    }
+}
+
+// Q9. Count how many numbers between 1 to 100 are divisble by both 3 and 5.
+for(let i=1;i<=100;i++){
+    if(i%3==0 && i%5==0){
+        console.log(i);
+    }
+}
+
+// q10. Stop at First Mutiple of 7
+// Write a loop from 1 to 100 that:
+// - prints each number
+// - stops completely when it finds the first number div by 7
+
+for(let i=1;i<=100;i++){
+    console.log(i);   
+    if(i%7==0){
+        break;
+    } 
+}
+
+// Q11. Skip Multiples of 3
+// write a loop from 1 to 20 that:
+// - skips no.s div by 3
+// - prints all others
+
+// use continue
+// expected o/p :
+// 1 2 4 5 7 8 10 11 .. ( no 3,6,9.. etc)
+
+for(let i=1;i<=20;i++){
+    if(i%3==0){
+        continue;
+    }
+   console.log(i); 
+}
+
+// Q3. print 5 Odd Numbers Only
+// Write a loop from 1 to 100 that:
+// - Prints only 5 odd numbers
+// - Then stops the loop
+
+// use both if, continue , and a counter + break
+// expected o/p:
+// 1 3 5 7 9
+
+let count = 0
+for(let i=1;i<=100;i++){
+    if(i%2===0){
+    count++;
+    console.log(i);
+    }
+    if(count === 5){
+        break;
+    }
+}
