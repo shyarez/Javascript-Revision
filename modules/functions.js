@@ -146,3 +146,114 @@ let dhdh = function(){
     console.log("hi there!")
 }
 
+// Common questions
+// 1. What is the difference between function declaration(or fn statement) and expression in terms of hoisting?
+
+// abcd();
+// function abcd(){
+//                 
+// }  <- still works as its hoisted
+
+// e.g ( fn expression)
+// abcd();
+// let abcd = function(){
+//      
+// }  <- Throws ERROR
+
+// 2. Output of this?
+// greet();
+// function greet(){
+//     console.log("Hello!");
+// }  <-- O/P : Hello!
+
+// 3. Convert this fnc into an arrow function
+// function multiply(a,b){
+//      return a * b;
+// }
+
+// ANS-
+// let multiply = (a,b) => {
+//     return a * b;
+// }
+
+
+// 4. Predict the output
+// function sayHi(name = "Guest"){
+// console.log("Hi", name);
+// }
+// sayHi(); <-- Guest ( Default value)
+
+
+// 5. Use rest paarameter to accept any no. of scores and return the total
+function getScore(...scores){
+    let total = 0;
+    scores.forEach(function(val){
+        total = total + val;
+    });
+    return total;
+}
+console.log(getScore(10,12,14,19));
+
+// 6. Fix the function using early return
+function checkAge(){
+if(age < 18 ){
+    console.log("Too young");
+} else {
+    console.log("Allowed");
+}
+}
+
+// ANS
+function checkAge(){
+if(age < 18 ) return "Too young";
+    return "Allowed";
+}
+console.log(checkAge(23));
+
+// 7. Pass a function inside another function and execute it
+
+function abcd(val){
+   val();
+}
+abcd(function(){
+    console.log("hi there !");
+});
+
+ // 8. pure or Impure function?
+ let total = 0;
+ function addToTotal(num){
+    total +=num;
+ }   // <- Impure fnc, as its modifying an outer value (total)
+
+
+ // 9. Convert the above function into a pure function
+ let total = 0;
+ function addToTotal(num){
+    let newTotal = total;
+    newTotal +=num;
+ } 
+
+ // 10. Convert this normal function into IIFE
+// Q. function init(){
+// console.log("Imnitialized");
+// }
+
+(function init(){
+ console.log("Initialized");
+})();
+
+// 11. What is the use of IIFE? Name 1 real world use case
+let miaw = (function(){
+    let score = 0;
+    return {
+    getScore: function () {
+        console.log(score);
+    },
+    setScore: function (val) {
+        score = val;
+    },
+};
+})();
+
+
+// 12. 
